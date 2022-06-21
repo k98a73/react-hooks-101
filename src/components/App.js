@@ -7,7 +7,8 @@ import Events from "./Events.js";
 import AppContext from "../contexts/AppContext.js";
 
 const App = () => {
-  const [state, dispatch] = useReducer(reducer, []);
+  const initialState = { events: [] };
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
     <AppContext.Provider value={{ state, dispatch }}>
